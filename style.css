@@ -1,0 +1,41 @@
+/* BioBridge: global design settings */
+:root {
+    --bio-primary: #176b50;
+    --bio-primary-dark: #104d3a;
+    --bio-background: #f5f8f6;
+    --bio-text: #24332c;
+    --bio-radius: 16px;
+}
+
+/* Base page appearance */
+body {
+    background-color: var(--bio-background);
+    color: var(--bio-text);
+    font-family: Arial, sans-serif;
+}
+
+/* Hero heading */
+.hero-title {
+    color: var(--bio-primary-dark);
+    letter-spacing: -1px;
+}
+
+/* Topic cards */
+.topic-card {
+    border: 1px solid #e1e9e3;
+    border-radius: var(--bio-radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Interactive effect when a mouse hovers over a card */
+.topic-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgb(0 0 0 / 10%);
+}
+
+/* Keyboard users should also see a clear focus indicator */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #e0a526;
+    outline-offset: 3px;
+}
