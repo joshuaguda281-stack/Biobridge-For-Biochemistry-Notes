@@ -39,3 +39,10 @@ button:focus-visible {
     outline: 3px solid #e0a526;
     outline-offset: 3px;
 }
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
