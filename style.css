@@ -129,3 +129,28 @@ p {
         grid-template-columns: 1fr;
     }
 }
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 240px), 1fr)
+    );
+    gap: 1rem;
+}
+
+.topic-item {
+    padding: 1.25rem;
+    background: white;
+    border: 1px solid #e1e9e3;
+    border-radius: var(--bio-radius);
+}
+
+.topic-item h3 {
+    color: var(--bio-primary-dark);
+    font-size: 1.15rem;
+}
+
+.topic-item p {
+    margin-bottom: 0;
+}
