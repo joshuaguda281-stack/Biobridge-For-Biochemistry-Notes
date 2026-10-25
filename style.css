@@ -25,12 +25,15 @@ body {
     border: 1px solid #e1e9e3;
     border-radius: var(--bio-radius);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-color: transparent;
+    transition: border-color 0.25s ease;
 }
 
 /* Interactive effect when a mouse hovers over a card */
 .topic-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.02) rotate(1deg);
     box-shadow: 0 10px 24px rgb(0 0 0 / 10%);
+    border-color: var(--bio-primary);
 }
 
 /* Keyboard users should also see a clear focus indicator */
@@ -153,4 +156,28 @@ p {
 
 .topic-item p {
     margin-bottom: 0;
+}
+
+
+.btn-success {
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    .topic-card,
+    .btn-success {
+        transition: none;
+    }
+
+    .topic-card:hover,
+    .btn-success:hover {
+        transform: none;
+    }
 }
