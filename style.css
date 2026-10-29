@@ -179,5 +179,37 @@ p {
     .topic-card:hover,
     .btn-success:hover {
         transform: none;
+        border-color: var(--bio-primary);
     }
+}
+
+.topic-list .topic-item:nth-child(2) {
+    border: 2px solid var(--bio-primary);
+}
+
+.section-title::before {
+    content: "◆";
+    color: var(--bio-primary);
+    margin-right: 0.5rem;
+}
+
+.section-heading::after {
+    content: "";
+    display: block;
+    width: 55%;
+    height: 4px;
+    margin-top: 5px;
+    background-color: var(--bio-primary);
+    border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #e0a526;
+    outline-offset: 3px;
+}
+
+.section-heading {
+    color: var(--bio-primary-dark);
+    font-weight: 700;
 }
